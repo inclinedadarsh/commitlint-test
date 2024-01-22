@@ -21,7 +21,10 @@ jobs:
           git --version
           node --version
           npm --version
-          bunx commitlint --version
+      - name: Install bun
+        run: npm install bun -g
+      - name: Print Bun version
+        run: bun --version
       - name: Install commitlint
         run: |
           bun install conventional-changelog-conventionalcommits
